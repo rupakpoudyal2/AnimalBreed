@@ -1,0 +1,10 @@
+﻿@model feedFooder
+@using Animal.Models
+
+@using (Html.BeginForm())
+{
+    <div class="modal-body form-horizontal">
+        Are you want to delete @Model.fooderNameEng?
+    </div>
+  <input type="submit" value="Delete"/>
+} 

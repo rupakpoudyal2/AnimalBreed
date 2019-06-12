@@ -1,0 +1,6 @@
+D:\Projects\Animal\AnimalData\bin\Debug\netcoreapp2.1\AnimalData.deps.json
+D:\Projects\Animal\AnimalData\bin\Debug\netcoreapp2.1\AnimalData.dll
+D:\Projects\Animal\AnimalData\obj\Debug\netcoreapp2.1\AnimalData.csprojAssemblyReference.cache
+D:\Projects\Animal\AnimalData\obj\Debug\netcoreapp2.1\AnimalData.csproj.CoreCompileInputs.cache
+D:\Projects\Animal\AnimalData\obj\Debug\netcoreapp2.1\AnimalData.AssemblyInfoInputs.cache
+D:\Projects\Animal\AnimalData\obj\Debug\netcoreapp2.1\AnimalData.AssemblyInfo.cs
