@@ -19,21 +19,25 @@ namespace Animal.Repository
         {
            T model= dbEntity.Find(id);
             dbEntity.Remove(model);
+            Save();
         }
 
         public T GetById(int id)
         {
             return dbEntity.Find(id);
+            
         }
 
         public IEnumerable<T> GetModel()
         {
             return dbEntity.ToList();
+
         }
 
         public void Insert(T Model)
         {
             dbEntity.Add(Model);
+            Save();
         }
 
         public void Save()
@@ -44,6 +48,7 @@ namespace Animal.Repository
         public void Update(T Model)
         {
             db.Entry(Model).State = EntityState.Modified;
+            Save();
         }
     }
 }

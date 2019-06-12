@@ -32,7 +32,8 @@ namespace Animal.Controllers
             feedFooder model = new feedFooder();
             if (id.HasValue)
             {
-                feedFooder feed = _repo.GetById(id.Value); if (feed != null)
+                feedFooder feed = _repo.GetById(id.Value);
+                if (feed != null)
                 {
                     model = feed;
                 }
@@ -47,9 +48,7 @@ namespace Animal.Controllers
                 if (ModelState.IsValid)
                 {
                     bool isNew = !id.HasValue;
-                    feedFooder feed = isNew ? new feedFooder
-                    {
-                    } : _repo.GetById(id.Value);
+                    feedFooder feed = isNew ? new feedFooder { } : _repo.GetById(id.Value);
                     feed = model;
                     if (isNew)
                     {
@@ -73,19 +72,17 @@ namespace Animal.Controllers
         public IActionResult DeleteFeed(int id)
         {
             feedFooder feed = _repo.GetById(id);
-            feedFooder model = new feedFooder
-            {
-              fooderNameNep = $"{feed.fooderNameNep}"
-            };
-            return View(model);
-            //return PartialView("~/Views/Student/_DeleteStudent.cshtml", model);
-        }
-        [HttpPost]
-        public IActionResult DeleteStudent(int id, FormCollection form)
-        {
             _repo.Delete(id);
+
             return RedirectToAction("Index");
+
         }
+        //[HttpPost]
+        //public IActionResult DeleteFeed(int id, FormCollection form)
+        //{
+        //    _repo.Delete(id);
+           
+        //}
         public IActionResult Index()
         {
             return View();
